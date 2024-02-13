@@ -1,11 +1,12 @@
 from selene import browser, be, have, by
 from pages.registration_page import RegistrationPage
 
+
 def test_positive_form_registration():
     registration_page = RegistrationPage()
     registration_page.open()
 
-    #WHEN
+    # WHEN
     registration_page.fill_first_name('Alex')
     registration_page.fill_last_name('Yanin')
     registration_page.fill_email('test@test.ru')
