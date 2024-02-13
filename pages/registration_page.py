@@ -1,6 +1,8 @@
 import os
 from selene import browser, be, have, by
 
+import resource
+
 
 class RegistrationPage:
     def open(self):
@@ -38,8 +40,9 @@ class RegistrationPage:
         browser.element('[for="hobbies-checkbox-3"]').click()
         return self
 
-    def upload_picture(self, value, ):
-        browser.element("#uploadPicture").send_keys(os.path.abspath(value))
+    def upload_picture(self, value):
+        browser.element('#uploadPicture').send_keys(resource.path(value))
+
 
     def type_current_address(self, value):
         browser.element('#currentAddress').should(be.blank).type(value)
