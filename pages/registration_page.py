@@ -1,6 +1,4 @@
-import os
 from selene import browser, be, have, by
-
 import resource
 
 
