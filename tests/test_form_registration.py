@@ -1,5 +1,5 @@
 from data import users
-from pages.resource import RegistrationPage
+from pages.registration_page import RegistrationPage
 
 
 def test_student_registration_form_2():
